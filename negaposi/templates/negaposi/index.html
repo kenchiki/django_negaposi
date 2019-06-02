@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ネガポジ判定</title>
+</head>
+<body>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.content.label_tag }}
+    </div>
+
+    <div>
+        {{ form.content }}
+    </div>
+    <div>
+        {{ result }}
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+</body>
+</html>
