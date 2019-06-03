@@ -7,7 +7,7 @@ from django import forms
 
 class NegaposiForm(forms.Form):
     content = forms.CharField(
-        label='文章',
+        label='判定したい文章（5000文字以内）',
         max_length=5000,
         required=False,
         help_text='文章をかいてください',

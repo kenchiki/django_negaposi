@@ -40,7 +40,7 @@ def index(request):
             elif estimate_2[0][0][1] > 0.6:
                 result = '君、まぁまぁネガティブやなぁ'
             elif estimate_2[0][0][1] > 0.5:
-                result = '君はよくわからんな'
+                result = '君はどっちかよくわからんな'
 
         elif estimate[0][0] == "__label__2,":
             print('ポジティブ', estimate_2[0][0][1])
@@ -49,7 +49,7 @@ def index(request):
             elif estimate_2[0][0][1] > 0.6:
                 result = '君、まぁまぁポジティブやなぁ'
             elif estimate_2[0][0][1] > 0.5:
-                result = '君はよくわからんな'
+                result = '君はどっちかよくわからんな'
 
     # settings.pyにnegaposi登録していないと読み込めないので注意
     return render(request, 'negaposi/index.html', {'form': form, 'result': result})
