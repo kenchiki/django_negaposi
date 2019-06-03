@@ -23,6 +23,8 @@ def index(request):
     else:
         form = NegaposiForm()
 
+    result = ''
+
     # is_validしないと値を取り出せない
     if form.is_valid():
         content = form.cleaned_data['content'].strip()
